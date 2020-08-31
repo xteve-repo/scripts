@@ -13,7 +13,7 @@ headers = {'User-Agent': 'VLC'}
 req = urllib.request.Request(url,headers=headers)
 
 # Get M3U file from provider
-response = urllib.request.urlopen(url)
+response = urllib.request.urlopen(req)
 data = response.read()
 providerM3uFile = data.decode('utf-8')
 

@@ -5,10 +5,16 @@ import os
 #Provider URL to download M3U file
 url = 'http://crazytv.org:826/get.php?username=FITH&password=password&type=m3u_plus&output=ts'
 #File path where to save the newly create M3U file.
-filePath = 'C:\\Users\\Fith\\Documents\\NFL.m3u' 
+filePath = 'C:\\Users\\Fith\\Documents\\NFL.m3u'
+
+#Headers
+headers = {'User-Agent': 'VLC'}
+
+#Combine URL and Headers into one
+req = urllib.request.Request(url,headers=headers)
 
 # Get M3U file from provider
-response = urllib.request.urlopen(url)
+response = urllib.request.urlopen(req)
 data = response.read()
 providerM3uFile = data.decode('utf-8')
 

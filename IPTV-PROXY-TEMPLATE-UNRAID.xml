@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>IPTV-Proxy</Name>
+  <Repository>pierro777/iptv-proxy:v2.0.5</Repository>
+  <Registry>https://hub.docker.com/r/pierro777/iptv-proxy</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1603259394</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>release</Value>
+      <Name>GIN_MODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>#######</Value>
+      <Name>XTREAM_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>XXXXXXX</Value>
+      <Name>XTREAM_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>http://IPTV:PORT</Value>
+      <Name>XTREAM_BASE_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>test</Value>
+      <Name>USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>test</Value>
+      <Name>PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>IP or FQDN</Value>
+      <Name>HOSTNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>8080</Value>
+      <Name>PORT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="GEN Mode" Target="GIN_MODE" Default="" Mode="" Description="Container Variable: GIN_MODE:" Type="Variable" Display="always" Required="false" Mask="false">debug</Config>
+  <Config Name="User" Target="XTREAM_USER" Default="" Mode="" Description="Container Variable: XTREAM_USER:" Type="Variable" Display="always" Required="false" Mask="false">########</Config>
+  <Config Name="Pass" Target="XTREAM_PASSWORD" Default="" Mode="" Description="Container Variable: XTREAM_PASSWORD:" Type="Variable" Display="always" Required="false" Mask="false">#######</Config>
+  <Config Name="URL" Target="XTREAM_BASE_URL" Default="" Mode="" Description="Container Variable: XTREAM_BASE_URL:" Type="Variable" Display="always" Required="false" Mask="false">http://IPTV:PORT</Config>
+  <Config Name="User" Target="USER" Default="" Mode="" Description="Container Variable: USER:" Type="Variable" Display="always" Required="false" Mask="false">test</Config>
+  <Config Name="Pass" Target="PASSWORD" Default="" Mode="" Description="Container Variable: PASSWORD:" Type="Variable" Display="always" Required="false" Mask="false">test</Config>
+  <Config Name="Hostname" Target="HOSTNAME" Default="" Mode="" Description="Container Variable: HOSTNAME:" Type="Variable" Display="always" Required="false" Mask="false">IP or FQDN</Config>
+  <Config Name="Port" Target="PORT" Default="" Mode="" Description="Container Variable: Ports:" Type="Variable" Display="always" Required="false" Mask="false">8080</Config>
+</Container>

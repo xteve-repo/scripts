@@ -1,0 +1,29 @@
+# xteve subfolder base config
+
+location /xteve {
+    return 301 $scheme://$host/xteve/;
+}
+
+location /xteve/ {
+
+    include /config/nginx/proxy.conf;
+    sub_filter_types application/javascript;
+    sub_filter 'window.location.port + "/data/"' 'window.location.port + "/xteve/data/"';
+    sub_filter 'window.location.port + "/api/"' 'window.location.port + "/xteve/api/"';
+    sub_filter 'window.location.port + "/m3u/"' 'window.location.port + "/xteve/m3u/"';
+    sub_filter 'window.location.port + "/xmltv/"' 'window.location.port + "/xteve/xmltv/"';
+    sub_filter 'window.location.port + "/stream/"' 'window.location.port + "/xteve/stream/"';
+    sub_filter 'window.location.port + "/web/"' 'window.location.port + "/xteve/web/"';
+    sub_filter 'window.location.port + "/download/"' 'window.location.port + "/xteve/download/"';
+    sub_filter 'window.location.port + "/data_images/"' 'window.location.port + "/xteve/data_images/"';
+    sub_filter_once on;
+
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection upgrade;
+    proxy_cookie_path / /xteve/;
+    proxy_redirect / /xteve/;
+    proxy_pass http://127.0.0.1:34400/xteve;
+
+    rewrite ^/xteve(.*) $1 break;
+
+}
